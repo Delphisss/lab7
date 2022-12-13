@@ -2,14 +2,33 @@
 
 using namespace std;
 
-
-int main(){
-  cout << adiff(180,270);
-  cout << adiff(210,45);
-  cout << adiff(0,360);
-  cout << adiff(10,350);
-  cout << adiff(95,260);
-  cout << adiff(90,-90);
-  cout << adiff(1000,280);
-  cout << adiff(60,244);
+int main()
+{
+	int i = 0, P[5000], k, result;
+	while(i < 5000){
+		P[i] = 2*i+1;
+		i++;
+	}
+	cout << "Please input k: " ;
+	cin >> k;
+	if (k>0)
+	{
+		i=0 ; 
+		result = 0 ;
+		while (i<5000)
+		{
+			if (P[i]%k == 0)
+			{
+				result = result - P[i];
+			}else{
+				result = result + P[i];
+			}
+			i++;
+		}
+		cout << "Result = "<< result;	
+	}else{
+		cout << "Invalid input!!!";
+	}
+	return 0;
 }
+//Kong
